@@ -27,9 +27,9 @@ export default class ProdutoController {
   }
   public async readOneByParams(
     req: Request,
-    res: Response<IProduto[]| null >,
+    res: Response<IProduto[] | null >,
   ) {
-    const {query:{ q }}= req;
+    const { query: { q } } = req;
     const result = await this._service.readOneByParams(String(q));
     return res.status(200).json(result);
   }
@@ -52,6 +52,7 @@ export default class ProdutoController {
     res: Response<IProduto>,
   ) {
     const result = await this._service.updatePartial(req.params.id, req.body);
+    console.log(result);
     return res.status(200).json(result);
   }
 }

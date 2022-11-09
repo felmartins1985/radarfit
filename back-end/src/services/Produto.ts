@@ -1,6 +1,6 @@
 import IService from '../interfaces/IService';
-import {IProduto, ProdutoZodSchema} from '../interfaces/IProduto';
-import {IModel} from '../interfaces/IModel';
+import { IProduto, ProdutoZodSchema } from '../interfaces/IProduto';
+import { IModel } from '../interfaces/IModel';
 import { ErrorTypes } from '../errors/catalog';
 
 class ProdutosService implements IService<IProduto> {
@@ -51,10 +51,11 @@ class ProdutosService implements IService<IProduto> {
       throw parsed.error;
     }
     const updated = await this._produto.updatePartial(_id, parsed.data);
+    console.log(updated, 'update');
     if (!updated) {
       throw new Error(ErrorTypes.EntityNotFound);
     }
     return updated;
   }
-  }      
+}      
 export default ProdutosService;

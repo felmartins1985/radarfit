@@ -16,10 +16,10 @@ abstract class MongoModel<T> implements IModel<T> {
   }
 
   public async readOneByParams(obj:string):Promise<T[] | null> {
-    const searchRegex = new RegExp(obj, "i");
+    const searchRegex = new RegExp(obj, 'i');
     return this._model.find({ $or: [
-      { produto: { $regex : searchRegex } },
-      { descricao: { $regex : searchRegex } },
+      { produto: { $regex: searchRegex } },
+      { descricao: { $regex: searchRegex } },
     ] });
   }
   public async update(_id:string, obj:T):Promise<T | null> {
@@ -32,6 +32,7 @@ abstract class MongoModel<T> implements IModel<T> {
   }
   public async updatePartial(_id: string, obj: Partial<T>): Promise<T | null> {
     if (!isValidObjectId(_id)) throw Error(ErrorTypes.EntityNotFound);
+    console.log(obj, 'obj');
     return this._model.findByIdAndUpdate(
       { _id },
       { ...obj } as UpdateQuery<T>,
