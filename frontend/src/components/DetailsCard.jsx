@@ -17,7 +17,7 @@ function DetailsCard({ produto, fav, handleFavorite }) {
           <p className="detailsCardp">{`R$ ${productDetails.valor.toFixed(2)}`}</p>
           <p className="detailsCardp">{productDetails.descricao}</p>
           <div className="detailsCardButton">
-            <button type="button" sclassName="editButton" onClick={() => setEdit(true)}> Editar </button>
+            <button type="button" className="editButton" onClick={() => setEdit(true)}> Editar </button>
             <input
               className="favoriteButton"
               src={fav.find(({ _id }) => _id === productDetails._id) ? black : white}

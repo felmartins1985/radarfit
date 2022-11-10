@@ -1,7 +1,7 @@
 import React, { useMemo, useState, useEffect } from 'react';
 import axios from 'axios';
 import ProdutoContext from './produtoContext';
-
+import PropTypes from 'prop-types';
 function ContextProvider({ children }) {
   const [produtos, setProdutos] = useState([]);
   const [load, setLoad] = useState(true);
