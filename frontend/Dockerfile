@@ -1,5 +1,6 @@
 FROM node:14-alpine
-WORKDIR /app
+
+WORKDIR /app-frontend
 
 COPY package.json .
 
@@ -7,6 +8,6 @@ RUN npm install
 
 COPY . .
 
-CMD ["npm", "run", "dev"]
+CMD ["npm", "start"]
 
-EXPOSE 3001
+EXPOSE 3000
