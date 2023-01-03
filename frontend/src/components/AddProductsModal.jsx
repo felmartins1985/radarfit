@@ -76,6 +76,7 @@ function AddProductModal() {
             onClick={() => {
               postProducts(addProdutos);
               handleClose();
+              window.location.reload();
             }}
           >
             Adicionar
