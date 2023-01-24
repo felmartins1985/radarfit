@@ -39,5 +39,5 @@ exit // para sair do container do backend
 ### Demonstração
 
 <p align="center">
-  <img src="https://github.com/guilherme-ac-fernandes/radarfit-product-api/blob/main/demo/product_details.png" alt="Products RadarFit Aplication - Demostração"/>
+  <img src="https://github.com/felmartins1985/radarfit/blob/main/frontend/src/images/Captura%20de%20tela%20de%202023-01-24%2015-17-08.png" alt="Products RadarFit Aplication - Demostração"/>
 </p>
