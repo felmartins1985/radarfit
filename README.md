@@ -18,7 +18,7 @@ Consiste em uma aplicação full-stack para gerenciamento de produtos, onde é p
 
 ```
 Para clonar o projeto:
-git clone https://github.com/felmartins1985/radarfit.git
+git clone git@github.com:felmartins1985/radarfit.git
 
 Para rodar a aplicação dockerizada, instalar as dependências e iniciar as aplicações:
 <-- na raiz do projeto -->
